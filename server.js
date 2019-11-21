@@ -2,8 +2,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 const router = express.Router();
-const db =
-  "mongodb+srv://cpclark360:Zxczxc1337@portfoliocontacts-snqrk.azure.mongodb.net/test?retryWrites=true&w=majority";
+const db = process.env.MONGODB_URL;
 
 // Load Contact model
 const ContactSchema = new mongoose.Schema({
